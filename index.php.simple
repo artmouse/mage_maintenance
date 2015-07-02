@@ -35,6 +35,15 @@ Whoops, it looks like you have an invalid PHP version.</h3></div><p>Magento supp
 }
 
 /**
+ * Maintenance mode
+ */
+$allowed = array('127.0.0.12', '60.241.193.31');
+if (file_exists(MAGENTO_ROOT.'/maintenance.flag') && !in_array($_SERVER['REMOTE_ADDR'], $allowed)) {
+    include_once dirname(__FILE__) . '/errors/503.php';
+    exit();
+}
+
+/**
  * Error reporting
  */
 error_reporting(E_ALL | E_STRICT);
@@ -60,14 +69,6 @@ if (!file_exists($mageFilename)) {
     exit;
 }
 
-/**
- * Maintenance mode
- */
-$allowed = array('127.0.0.12', '60.241.193.31');
-if (file_exists(MAGENTO_ROOT.'/maintenance.flag') && !in_array($_SERVER['REMOTE_ADDR'], $allowed)) {
-    include_once dirname(__FILE__) . '/errors/503.php';
-    exit();
-}
 
 require_once $mageFilename;
 

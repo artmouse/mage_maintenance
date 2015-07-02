@@ -14,6 +14,7 @@ Simple template for magento maintenance mode and allow white listed ip to access
 ```php 
 /**
  * Maintenance mode
+ * note! insert me before `error_reporting(E_ALL | E_STRICT);`
  */
 $allowed_ip = array('127.0.0.12', '60.241.193.31');
 if (file_exists(MAGENTO_ROOT.'/maintenance.flag') && !in_array($_SERVER['REMOTE_ADDR'], $allowed_ip)) {
