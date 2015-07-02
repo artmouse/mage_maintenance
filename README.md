@@ -10,7 +10,7 @@ Simple template for magento maintenance mode and allow white listed ip to access
  - Extract files at your magento installation
  - For white listed ip addresses. Replace or backup your original `index.php` then use and rename the
  `index.php.simple` to `index.php`.
- - or, use and insert the code below in your `index.html` for whitelisted ip
+ - or, use and insert the code below in your `index.php` for whitelisted ip
 ```php 
 /**
  * Maintenance mode
