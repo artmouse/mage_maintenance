@@ -1,0 +1,12 @@
+{
+    "name": "reillo/maintenance",
+    "type": "magento-module",
+    "license":"OSL-3.0",
+    "description":"Simple template for magento errors and maintenance mode",
+    "authors":[
+        {
+            "name":"Ner Atillo",
+            "email":"atilloregner@gmail.com"
+        }
+    ],
+}
