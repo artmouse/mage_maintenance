@@ -2,7 +2,7 @@
 
 Simple template for magento maintenance mode and allow white listed ip to access the site when maintenance mode.
 
-![Simple Magento Maintenance Template](https://goo.gl/cSmIs7)
+![Simple Magento Maintenance Template](https://goo.gl/hU2oh9)
 
 ## Installation
 
